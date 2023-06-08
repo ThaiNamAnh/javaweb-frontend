@@ -1,0 +1,37 @@
+<h1>Order of Customer {{id}}</h1>
+
+<table border = "1" style="border-collapse: collapse;">
+
+  <tr>
+    <th>ID</th>
+    <th>Total Quantity</th>
+    <th>Total Price</th>
+    <th>Date Creatd</th>
+    <!-- <th>Customer ID</th> -->
+    <th>Order Item</th>
+    <th>deleteOrder</th>
+    <th>Delete Many</th>
+  </tr>
+
+   <tr *ngFor="let l of listOrder">
+      <td style="min-width: 50px;">{{l.id}}</td>
+      <td style="min-width: 100px;">{{l.totalQuantity}}</td>
+      <td style="min-width: 100px;">{{l.totalPrice}}</td>
+      <td style="min-width: 100px;">{{l.dateCreated}}</td>
+      <!-- <td style="min-width: 100px;">{{l.customerId}}</td> -->
+    <td><button mat-button >Show Orders Items</button></td>
+    <!-- <td><img src="{{ l.avatar }}" alt="Avatar" width="100" height="80"></td> -->
+    <!-- <td>{{l.date}}</td> -->
+    <td>
+      <button class = "btn btn-danger" >Xoa</button>
+    </td>
+    <td><input type="checkbox" ></td>
+  </tr>
+
+
+  <tr>
+    <td [colSpan]="6" style="border:none"></td>
+    <button class="btn btn-danger"  >Delete Selected</button>
+  </tr>
+</table>
+
